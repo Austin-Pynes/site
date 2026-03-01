@@ -1,346 +1,243 @@
-﻿/* 
+/* 
 Theme & Template Designed By: Todd Swift
 ThemeKings --  www.themekings.net
 Sept. 2009  All Rights Reserved
 Section X Yellow Revised 02/22
+Footer badge support added 2026
 */
+
 body {
-	background-image: url('../theme/headerfill.gif');
-	background-repeat: repeat-x;
-	padding: 0px;
-	margin: 0px;
-	list-style: none;
-	background-color: #232323;
-	font-size: .7em;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-weight: normal;
+    background-image: url('../theme/headerfill.gif');
+    background-repeat: repeat-x;
+    background-color: #232323;
+    padding: 0;
+    margin: 0;
+    font-size: .7em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
 }
+
+/* Wrapper */
 #wrapper {
-	padding: 0px;
-	margin: 0px auto 0px auto;
-	width: 984px;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-	list-style-image: none;
-	background-image: url('../theme/bodyfill.gif');
-	background-repeat: repeat-y;
+    margin: 0 auto;
+    width: 984px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../theme/bodyfill.gif');
+    background-repeat: repeat-y;
 }
-.header {
-	background-image: url('../theme/header.jpg');
-	background-repeat: no-repeat;
-	padding: 0px;
-	margin: 0px auto 0px auto;
-	width: 984px;
-	height: 210px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-}
+
+/* Headers */
+.header,
 .header2 {
-	background-image: url('../theme/header-2.jpg');
-	background-repeat: no-repeat;
-	padding: 0px;
-	margin: 0px auto 0px auto;
-	width: 984px;
-	height: 210px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
+    width: 984px;
+    height: 210px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
 }
+
+.header { background-image: url('../theme/header.jpg'); }
+.header2 { background-image: url('../theme/header-2.jpg'); }
+
+/* Horizontal Menu */
 #menu-H {
-	padding: 0px;
-	margin: 88px auto 0px auto;
-	width: 500px;
-	height: 64px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
+    margin: 88px auto 0;
+    width: 500px;
+    height: 64px;
 }
+
 #menu-H ul {
-	padding: 0px;
-	margin: 0px;
-	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
 #menu-H ul li {
-	padding: 0px;
-	margin: 0px 0px 0px 0px;
-	width: 125px;
-	height: 64px;
-	position: relative;
-	overflow: hidden;
-	float: left;
-	text-align: center;
-	line-height: 54px;
-	text-decoration: none;
-	font-weight: bold;
-	color: #666666;
+    float: left;
+    width: 125px;
+    height: 64px;
+    text-align: center;
+    line-height: 54px;
+    font-weight: bold;
+    color: #666;
 }
-a.hbutton, a.hbutton:link, a.hbutton:visited {
-	margin: 0px 0px 0px 0px;
-	background: url('../theme/butn-over.png') no-repeat 0 0;
-	width: 125px;
-	height: 64px;
-	display: block;
-	color: #666666;
-	text-decoration: none;
-	font-weight: bold;
+
+a.hbutton,
+a.hbutton:link,
+a.hbutton:visited {
+    display: block;
+    width: 125px;
+    height: 64px;
+    background: url('../theme/butn-over.png') no-repeat 0 0;
+    color: #666;
+    text-decoration: none;
 }
+
 a.hbutton:hover {
-	background-position: 0px -64px;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: bold;
+    background-position: 0 -64px;
+    color: #fff;
 }
-.headerflash {
-	padding: 0px;
-	margin: 0px auto 0px auto;
-	width: 560px;
-	height: 210px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-}
-#leftcol {
-	position: relative;
-	float: left;
-	width: 220px; /* for IE5/WIN */;
-	voice-family: "\"}\"";
-	voice-family: inherit;
-	width: 200px; /* actual value */;
-	padding: 0px;
-	margin-top: 0px;
-	height: 100%;
-	margin-left: 50px;
-	overflow: hidden;
-}
+
+/* Columns */
+#leftcol,
 #rightcol {
-	position: relative;
-	float: left;
-	width: 220px; /* for IE5/WIN */;
-	voice-family: "\"}\"";
-	voice-family: inherit;
-	width: 200px; /* actual value */;
-	padding: 0px;
-	margin-top: 0px;
-	height: 100%;
-	margin-left: 15px;
-	overflow: hidden;
+    float: left;
+    width: 200px;
+    margin-top: 0;
+    height: 100%;
+    overflow: hidden;
 }
+
+#leftcol { margin-left: 50px; }
+#rightcol { margin-left: 15px; }
+
 #centercol {
-	position: relative;
-	padding: 0px;
-	width: 454px;
-	height: 100%;
-	float: left;
-	overflow: hidden;
-	list-style-type: none;
-	margin-top: 0px;
-	margin-left: 15px;
+    float: left;
+    width: 454px;
+    margin-left: 15px;
+    overflow: hidden;
 }
+
+/* Footer */
 #footer {
-	background-image: url('../theme/footer.jpg');
-	background-repeat: no-repeat;
-	padding: 0px;
-	margin: 0px;
-	width: 984px;
-	height: 100px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
+    background-image: url('../theme/footer.jpg');
+    background-repeat: no-repeat;
+    width: 984px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
 }
+
+/* Footer text */
 #footer-notes {
-	padding: 0px;
-	margin: 50px auto 0px auto;
-	width: 320px;
-	height: 20px;
-	position: relative;
-	color: #444444;
-	text-align: center;
-	font-size: 90%;
+    margin: 40px auto 0;
+    width: 320px;
+    height: 20px;
+    text-align: center;
+    color: #444;
+    font-size: 90%;
 }
-/* Clears & Floats */
-.clearL {
-	clear: left;
+
+/* === 88x31 BADGES === */
+#footer-badges {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
-.clearR {
-	clear: right;
+
+#footer-badges a {
+    display: inline-block;
+    margin: 0 3px;
 }
-.clearB {
-	clear: both;
+
+#footer-badges img {
+    width: 88px;
+    height: 31px;
+    image-rendering: pixelated;
 }
-.fL {
-	margin: 2px 8px 5px 2px;
-	float: left;
-	overflow: hidden;
-	width: 150px;
-	height: 100px;
-	position: relative;
-	list-style-type: none;
-}
-.fR {
-	margin: 2px 2px 5px 8px;
-	float: right;
-	overflow: hidden;
-	width: 150px;
-	height: 100px;
-	position: relative;
-	list-style-type: none;
-}
-/* Nav Box */
+
+/* Clears */
+.clearL { clear: left; }
+.clearR { clear: right; }
+.clearB { clear: both; }
+
+/* Nav Boxes */
 .navbox {
-	padding: 0px;
-	margin: 0px;
-	width: 200px;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
 }
+
 .navhead {
-	background-image: url('../theme/navtop.jpg');
-	background-repeat: no-repeat;
-	text-align: center;
-	padding: 0px;
-	margin: 0px;
-	width: 200px;
-	height: 70px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-	color: #666666;
-	line-height: 94px;
-	font-weight: bold;
+    background-image: url('../theme/navtop.jpg');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    line-height: 94px;
+    font-weight: bold;
+    color: #666;
 }
+
 .navbody {
-	background-image: url('../theme/navfill.gif');
-	background-repeat: repeat-y;
-	padding: 0px;
-	margin: 0px;
-	width: 200px;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
+    background-image: url('../theme/navfill.gif');
+    background-repeat: repeat-y;
+    width: 200px;
 }
+
 .navinfo {
-	padding: 0px;
-	margin: 0px auto 0px auto;
-	width: 158px;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-	font-weight: normal;
-	color: #464646;
-	text-decoration: none;
+    width: 158px;
+    margin: 0 auto;
+    color: #464646;
 }
+
 .navfooter {
-	background-image: url('../theme/navbtm.gif');
-	background-repeat: no-repeat;
-	margin: 0px 0px 20px 0px;
-	padding: 0px;
-	width: 200px;
-	position: relative;
-	height: 35px;
-	overflow: hidden;
-	list-style-type: none;
+    background-image: url('../theme/navbtm.gif');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 35px;
+    margin-bottom: 20px;
 }
-/* Center Menu */
+
+/* Center Content */
 .cntbox {
-	padding: 0px;
-	margin: 0px;
-	width: 454px;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
+    width: 454px;
+    overflow: hidden;
 }
+
 .cnthead {
-	background-image: url('../theme/cnttop.jpg');
-	background-repeat: no-repeat;
-	padding: 0px;
-	margin: 0px;
-	width: 454px;
-	height: 45px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-	text-decoration: none;
+    background-image: url('../theme/cnttop.jpg');
+    background-repeat: no-repeat;
+    height: 45px;
 }
+
 .cnttitle {
-	padding: 0px;
-	margin: 24px auto 0px auto;
-	width: 300px;
-	height: 18px;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-	color: #666666;
-	text-decoration: none;
-	text-transform: none;
-	text-align: center;
-	text-indent: 0px;
-	font-weight: bold;
+    margin: 24px auto 0;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
 }
+
 .cntbody {
-	background-image: url('../theme/cntfill.jpg');
-	background-repeat: repeat-y;
-	padding: 0px;
-	margin: 0px;
-	width: 454px;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
+    background-image: url('../theme/cntfill.jpg');
+    background-repeat: repeat-y;
 }
+
 .cntinfo {
-	padding: 0px;
-	margin: 0px auto 0px auto;
-	width: 396px;
-	height: 100%;
-	position: relative;
-	overflow: hidden;
-	list-style-type: none;
-	color: #464646;
-	text-decoration: none;
-	text-indent: 0px;
+    width: 396px;
+    margin: 0 auto;
+    color: #464646;
 }
+
 .cntfooter {
-	background-image: url('../theme/cntbtm.jpg');
-	background-repeat: no-repeat;
-	margin: 0px 0px 20px 0px;
-	padding: 0px;
-	width: 454px;
-	position: relative;
-	height: 34px;
-	overflow: hidden;
-	list-style-type: none;
+    background-image: url('../theme/cntbtm.jpg');
+    background-repeat: no-repeat;
+    height: 34px;
+    margin-bottom: 20px;
 }
-/* Vertical Navigation */
+
+/* Vertical Nav */
 .nav-menu ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .nav-menu li {
-	color: #464646;
-	text-transform: none;
-	text-decoration: none;
-	text-align: left;
-	padding: 0px;
-	margin: 0px 0px 0px 24px;
+    margin-left: 24px;
 }
+
 .nav-menu li a {
-	line-height: 140%;
-	color: #464646;
-	text-decoration: none;
-	text-align: left;
+    color: #464646;
+    text-decoration: none;
+    line-height: 140%;
 }
+
 .nav-menu li a:hover {
-	line-height: 140%;
-	color: #FFFF00;
-	text-decoration: none;
-	text-align: left;
+    color: #ffff00;
 }
