@@ -120,24 +120,50 @@ a.hbutton:hover {
     font-size: 90%;
 }
 
-/* === 88x31 BADGES === */
+/* === 88x31 BADGES (sliding) === */
 #footer-badges {
     position: absolute;
     bottom: 10px;
     left: 0;
     width: 100%;
-    text-align: center;
+    height: 31px;
+    overflow: hidden;
 }
 
-#footer-badges a {
+.badge-viewport {
+    width: 100%;
+    height: 31px;
+    overflow: hidden;
+    position: relative;
+}
+
+.badge-track {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: badge-slide 30s linear infinite;
+}
+
+.badge-track a {
     display: inline-block;
     margin: 0 3px;
 }
 
-#footer-badges img {
+.badge-track img {
     width: 88px;
     height: 31px;
     image-rendering: pixelated;
+}
+
+.badge-viewport:hover .badge-track {
+    animation-play-state: paused;
+}
+
+@keyframes badge-slide {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 
 /* Clears */
