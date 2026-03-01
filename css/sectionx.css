@@ -27,13 +27,6 @@ body {
     background-repeat: repeat-y;
 }
 
-/* Clear wrapper floats */
-#wrapper::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 /* Headers */
 .header,
 .header2 {
@@ -71,7 +64,9 @@ body {
     color: #666;
 }
 
-a.hbutton, a.hbutton:link, a.hbutton:visited {
+a.hbutton,
+a.hbutton:link,
+a.hbutton:visited {
     display: block;
     width: 125px;
     height: 64px;
@@ -91,6 +86,7 @@ a.hbutton:hover {
     float: left;
     width: 200px;
     margin-top: 0;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -120,54 +116,28 @@ a.hbutton:hover {
     width: 320px;
     height: 20px;
     text-align: center;
-    color: #f0f0f0; /* light text for visibility */
+    color: #444;
     font-size: 90%;
 }
 
-/* === 88x31 BADGES (sliding) === */
+/* === 88x31 BADGES === */
 #footer-badges {
     position: absolute;
     bottom: 10px;
     left: 0;
     width: 100%;
-    height: 31px;
-    overflow: hidden;
+    text-align: center;
 }
 
-.badge-viewport {
-    width: 100%;
-    height: 31px;
-    overflow: hidden;
-    position: relative;
-}
-
-.badge-track {
-    display: inline-block;
-    white-space: nowrap;
-    position: absolute;
-    left: 0;
-    top: 0;
-    animation: badge-slide 30s linear infinite;
-}
-
-.badge-track a {
+#footer-badges a {
     display: inline-block;
     margin: 0 3px;
 }
 
-.badge-track img {
+#footer-badges img {
     width: 88px;
     height: 31px;
     image-rendering: pixelated;
-}
-
-.badge-viewport:hover .badge-track {
-    animation-play-state: paused;
-}
-
-@keyframes badge-slide {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
 }
 
 /* Clears */
@@ -202,14 +172,7 @@ a.hbutton:hover {
 .navinfo {
     width: 158px;
     margin: 0 auto;
-    color: #f0f0f0; /* light text */
-}
-
-/* Clear floats inside navinfo */
-.navinfo::after {
-    content: "";
-    display: table;
-    clear: both;
+    color: #464646;
 }
 
 .navfooter {
@@ -248,14 +211,7 @@ a.hbutton:hover {
 .cntinfo {
     width: 396px;
     margin: 0 auto;
-    color: #f0f0f0; /* light text */
-}
-
-/* Clear floats inside cntinfo (for floated images) */
-.cntinfo::after {
-    content: "";
-    display: table;
-    clear: both;
+    color: #464646;
 }
 
 .cntfooter {
@@ -277,7 +233,7 @@ a.hbutton:hover {
 }
 
 .nav-menu li a {
-    color: #f0f0f0; /* light text */
+    color: #464646;
     text-decoration: none;
     line-height: 140%;
 }
