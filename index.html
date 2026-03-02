@@ -2,20 +2,16 @@
 <html>
 
 <head>
-
 <meta content="text/html; charset=windows-1252" http-equiv="Content-Type" />
 
-<!-- SEO Related -->
 <title>Shreyash Srivastva</title>
 <meta name="keywords" content="" />
 <meta content="english" name="Language"/>
 <meta content="public" http-equiv="cache-control"/>
 <meta content="index,follow" name="robots"/>
 
-<!-- META TAGS -->
-<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2984065-7"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -24,26 +20,20 @@
   gtag('config', 'UA-2984065-7');
 </script>
 
-<!-- CSS FILES -->
 <link href="css/sectionx.css" rel="stylesheet" type="text/css" />
 
-<!-- 🔹 Badge conveyor styles (only addition) -->
+<!-- Badge conveyor: minimal + theme-safe -->
 <style>
 #footer-badges {
-  width: 100%;
   overflow: hidden;
+  white-space: nowrap;
   padding: 6px 0;
 }
 
-#badge-viewport {
-  width: 100%;
-  overflow: hidden;
-}
-
 #badge-track {
-  display: flex;
-  width: max-content;
-  gap: 10px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
   will-change: transform;
 }
 
@@ -93,9 +83,9 @@
   <div class="navhead">Education</div>
   <div class="navbody">
     <div class="navinfo">
-      <p>2022-26 AKTU BTECH</p>
-      <p>2022-25 PSYCH HONS</p>
-      <p>2010-22 SCHOOL-ING</p>
+      <p>2022-26  AKTU BTECH</p>
+      <p>2022-25  PSYCH HONS</p>
+      <p>2010-22  SCHOOL-ING</p>
     </div>
   </div>
 </div>
@@ -152,9 +142,9 @@
         the assumptions, they have about me,<br>
         i wish i was that wise and kind, at all times.<br>
         and all the way from the bottom of my mind,<br>
-        to my physical self at the mortal end.<br><br>
+        to my physical self at the mortal end. <br><br>
         i wish and long for a ghibli life, a good one,<br>
-        as a fruit to my farming, at the end sometime,<br>
+        as a fruit to my farming, at the end sometime, <br>
         cultivating my very own life, wherever this ends.<br><br>
         where i am no more the tags i am given, nowhere, none of them,<br>
         and you just call me by my name and nothing that doesn't matter.<br>
@@ -172,10 +162,16 @@
         <img style="float:right; margin-left:10px; width:150px; height:120px;"
         src="https://shreyazh.github.io/img-web-scrape-folder/logo.png"
         alt="The Social Boundary Logo">
-        <b><i>The Social Boundary</i></b> is a dynamic framework for human,
-        interspecies, and AI interactions...
+        <b><i>The Social Boundary</i></b> is a dynamic framework for human, interspecies, and AI interactions, adapting based on familiarity, context, and engagement frequency. Unlike static models, it accounts for both gradual and immediate boundary shifts, shaped by cultural norms, repeated interactions, and emotional resonance.
       </p>
-      <p><b>S = k / (D + F × C)</b></p>
+      <p>
+        Our mathematical model,  
+        <b>S = k / (D + F × C)</b>,  
+        quantifies boundary variations, where <b>k</b> adjusts for species-specific behavior.
+      </p>
+      <p>
+        Applications range from AI-driven adaptive communication to urban social cohesion and wildlife conservation. By bridging psychology, sociology, and ethology, this research offers a universal model for evolving sociability across diverse entities and environments.
+      </p>
     </div>
   </div>
 </div>
@@ -213,7 +209,7 @@
   <div class="navhead">Opinion</div>
   <div class="navbody">
     <div class="navinfo">
-      <p>Life is, in my opinion the best thing that ever happend to us...</p>
+      <p>Life is, in my opinion the best thing that ever happend to us. For me it has turned out to prove me how wrong I am in considering it otherwise and made me finally realise <i>What a Wonderful World</i> it is.</p>
     </div>
   </div>
 </div>
@@ -232,21 +228,18 @@
 <div id="footer">
   <div id="footer-notes">Shreyash Srivastva</div>
 
-  <!-- 🔹 Badge conveyor -->
   <div id="footer-badges">
-    <div id="badge-viewport">
-      <div id="badge-track">
-        <img src="badges/badge1.gif" alt="Badge">
-        <img src="badges/badge2.gif" alt="Badge">
-        <img src="badges/badge3.gif" alt="Badge">
-        <img src="badges/badge4.png" alt="Badge">
-        <img src="badges/badge5.png" alt="Badge">
-        <img src="badges/badge6.png" alt="Badge">
-        <img src="badges/badge7.png" alt="Badge">
-        <img src="badges/badge8.png" alt="Badge">
-        <img src="badges/badge9.png" alt="Badge">
-        <img src="badges/badge10.png" alt="Badge">
-      </div>
+    <div id="badge-track">
+      <img src="badges/badge1.gif">
+      <img src="badges/badge2.gif">
+      <img src="badges/badge3.gif">
+      <img src="badges/badge4.png">
+      <img src="badges/badge5.png">
+      <img src="badges/badge6.png">
+      <img src="badges/badge7.png">
+      <img src="badges/badge8.png">
+      <img src="badges/badge9.png">
+      <img src="badges/badge10.png">
     </div>
   </div>
 </div>
@@ -267,22 +260,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<!-- 🔹 Conveyor logic -->
 <script>
 (function () {
   const track = document.getElementById("badge-track");
   track.innerHTML += track.innerHTML;
 
   let x = 0;
-  const speed = 0.4;
-
-  function tick() {
-    x -= speed;
+  function move() {
+    x -= 0.3;
     if (Math.abs(x) >= track.scrollWidth / 2) x = 0;
     track.style.transform = `translateX(${x}px)`;
-    requestAnimationFrame(tick);
+    requestAnimationFrame(move);
   }
-  tick();
+  move();
 })();
 </script>
 
